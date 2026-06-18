@@ -1,5 +1,7 @@
 #include "All_Init.h"
 
+Mecanum_typdef MecanumData={0};
+
 //总控制结构体
 CONTAL_Typedef RUI_V_CONTAL = { 0 };
 

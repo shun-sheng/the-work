@@ -21,7 +21,7 @@ typedef struct
 	  DM_MOTOR_Typdef m_dm4310_y_t;
 	  DM_MOTOR_Typdef m_dm4310_p_t;
 
-}MOTOR_Typdef;
+}MOTOR_Typedef;
 
 typedef struct
 {

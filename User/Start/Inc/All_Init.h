@@ -54,7 +54,7 @@ extern  TYPEDEF_VISION VISION_V_DATA;////��ͨ�Ӿ�
 extern TD_t TDDDD;
 
 
-extern MOTOR_Typdef ALL_MOTOR;
+extern MOTOR_Typedef ALL_MOTOR;
 
 extern pid_type_def imu_temp;
 
@@ -84,5 +84,7 @@ extern float vision_state;
 extern float heat_state;
 extern float huanchongnengliang;
 extern uint8_t bulltspeed;
+
+Mecanum_typdef MecanumData;
 
 #endif

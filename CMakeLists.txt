@@ -2,9 +2,11 @@ cmake_minimum_required(VERSION 3.22)
 
 set(CMAKE_PROJECT_NAME C_Board_Framework_Old)
 
-enable_language(C ASM)
 
 project(${CMAKE_PROJECT_NAME})
+enable_language(C ASM)
+
+
 
 if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE "Debug")
@@ -18,7 +20,9 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS TRUE)
 
 set(CPU_FLAGS -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard)
 
-add_executable(${CMAKE_PROJECT_NAME})
+add_executable(${CMAKE_PROJECT_NAME}
+        Bsp/Src/DJI_Motor.c
+        User/Bsp/RUI_MATH.c)
 
 add_subdirectory(cmake/stm32cubemx)
 add_subdirectory(Middlewares/CMSIS)

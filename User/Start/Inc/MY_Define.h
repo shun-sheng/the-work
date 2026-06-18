@@ -95,6 +95,8 @@
 #define MOTOR_D_CHASSIS_2 1
 #define MOTOR_D_CHASSIS_3 2
 #define MOTOR_D_CHASSIS_4 3
+
+#define CHASSIS_PID_S   {   23.0f,   0.0f,   0.0f   }
 // 云台电机
 #define MOTOR_D_GIMBAL_YAW 0
 #define MOTOR_D_GIMBAL_PIT 1
