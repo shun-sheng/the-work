@@ -1,5 +1,5 @@
 #include "Chassis_Task.h"
-#include "can.h"
+
 
 void CHhassiswheel_PID_Init(MOTOR_Typedef *ALL_MOTOR,Average *ALL_Average_Speed)
 {
@@ -210,7 +210,7 @@ void Chassis_ControlTask(void)
 
     /* ============================================================
        2. 小陀螺自旋模式
-          G键翻转 → 开启后Vr固定为自旋速度
+          开启后Vr固定为自旋速度
           使用IMU航向角做场定向控制(矢量定心)
        ============================================================ */
     MecanumData.Spin_Flag = DBUS.Remote.S2;

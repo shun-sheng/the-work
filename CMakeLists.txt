@@ -21,8 +21,12 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS TRUE)
 set(CPU_FLAGS -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard)
 
 add_executable(${CMAKE_PROJECT_NAME}
-        Bsp/Src/DJI_Motor.c
-        User/Bsp/RUI_MATH.c)
+        User/Bsp/DJI_Motor.c
+        User/Bsp/RUI_MATH.c
+        User/App/inc/Chassis_Task.h
+        User/Bsp/inc/RUI_MATH.h
+        User/App/inc/Shoot_Task.h)
+
 
 add_subdirectory(cmake/stm32cubemx)
 add_subdirectory(Middlewares/CMSIS)
