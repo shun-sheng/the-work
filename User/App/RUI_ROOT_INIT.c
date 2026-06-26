@@ -30,7 +30,7 @@
  *	@time:				//23-04-13 17:38
  *	@ReadMe:			//
  ************************************************************万能分隔符**************************************************************/
-void RUI_F_ROOT(RUI_ROOT_STATUS_Typedef *Root, VT13_Typedef *DBUS, MOTOR_Typdef *MOTOR, CAP_RXDATA *CAP_GET)
+void RUI_F_ROOT(RUI_ROOT_STATUS_Typedef *Root, VT13_Typedef *DBUS, MOTOR_Typedef *MOTOR, CAP_RXDATA *CAP_GET)
 {
     RUI_F_ROOT_ALL_STATUS(Root, DBUS, MOTOR, CAP_GET);
     RUI_F_MASTER_LOCATION_JUDGE(Root);
@@ -86,7 +86,7 @@ uint8_t DM_F_MOTOR_STATUS(DM_MOTOR_DATA_Typdef* DATA)
  *  @LastUpDataTime:    //2023-04-13 15:22    bestrui
  *  @UpData：           //电机检测封装成函数
  ************************************************************万能分隔符**************************************************************/
-void RUI_F_ROOT_ALL_STATUS(RUI_ROOT_STATUS_Typedef *Root, VT13_Typedef *DBUS, MOTOR_Typdef *MOTOR, CAP_RXDATA *CAP_GET)
+void RUI_F_ROOT_ALL_STATUS(RUI_ROOT_STATUS_Typedef *Root, VT13_Typedef *DBUS, MOTOR_Typedef *MOTOR, CAP_RXDATA *CAP_GET)
 {
 		
     //遥控在线监测

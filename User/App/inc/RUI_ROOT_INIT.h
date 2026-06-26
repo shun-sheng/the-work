@@ -25,9 +25,9 @@
 #include "VT13.h"
 
 //在定时器调用这一个函数即可
-void RUI_F_ROOT(RUI_ROOT_STATUS_Typedef *Root, VT13_Typedef *DBUS, MOTOR_Typdef *MOTOR, CAP_RXDATA *CAP_GET);
+void RUI_F_ROOT(RUI_ROOT_STATUS_Typedef *Root, VT13_Typedef *DBUS, MOTOR_Typedef *MOTOR, CAP_RXDATA *CAP_GET);
 //总的状态监测
-void RUI_F_ROOT_ALL_STATUS(RUI_ROOT_STATUS_Typedef *Root, VT13_Typedef *DBUS, MOTOR_Typdef *MOTOR, CAP_RXDATA *CAP_GET);
+void RUI_F_ROOT_ALL_STATUS(RUI_ROOT_STATUS_Typedef *Root, VT13_Typedef *DBUS, MOTOR_Typedef *MOTOR, CAP_RXDATA *CAP_GET);
 uint8_t RUI_F_MASTER_LOCATION_JUDGE(RUI_ROOT_STATUS_Typedef *Root);
 //主控通信
 //uint8_t RUI_F_MASTER_COMMUNICATION(void);

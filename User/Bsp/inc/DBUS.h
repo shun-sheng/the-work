@@ -12,5 +12,7 @@
 
 #include "MY_Define.h"
 
+void DBUS_Resolved(uint8_t* Data, DBUS_Typedef *DBUS);
+
 
 #endif

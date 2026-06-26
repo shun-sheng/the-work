@@ -62,6 +62,8 @@
  ******************************************************************************
  */
 #include "controller.h"
+#include "user_lib.h"
+#include "bsp_dwt.h"
 
 /******************************** FUZZY PID **********************************/
 static float FuzzyRuleKpRAW[7][7] = {
@@ -690,7 +692,7 @@ float TD_Calculate(TD_t *td, float input)
     d = td->r * td->h0 * td->h0;//它用于表示函数的变化率或斜率
     a0 = td->dx * td->h0;       //输入信号的初始值或初值
     y = td->x - td->Input + a0; //微分器的输出信号，表示对输入信号进行微分后得到的结果
-    a1 = Sqrt(d * (d + 8 * abs(y)));//它根据斜率与输出乘法、加法和开平方运算得到                   系数1
+    a1 = sqrt(d * (d + 8 * abs(y)));//它根据斜率与输出乘法、加法和开平方运算得到                   系数1
     a2 = a0 + sign(y) * (a1 - d) / 2;  //它根据初始值a0、输出y和系数a1的值计算得到                系数2
     a = (a0 + y) * (sign(y + d) - sign(y - d)) / 2 + a2 * (1 - (sign(y + d) - sign(y - d)) / 2);//系数3
     fhan = -td->r * a / d * (sign(a + d) - sign(a - d)) / 2 -

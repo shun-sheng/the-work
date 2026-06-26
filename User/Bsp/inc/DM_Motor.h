@@ -3,6 +3,7 @@
 
 
 #include  "MY_Define.h"
+#include  "RUI_MATH.h"
 
 
 float uint_to_float(int x_int, float x_min, float x_max, int bits);

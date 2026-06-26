@@ -1,13 +1,7 @@
 #ifndef __ROBOT_H
 #define __ROBOT_H
 
-#include "DBUS.h"
-#include "Motors.h"
-#include "Power_CAP.h"
-#include "Vision.h"
-#include "IMU_Task.h"
-#include "controller.h"
-#include "VT13.h"
+#include "MY_Define.h"
 
 
 
@@ -19,7 +13,7 @@ void RobotTask(uint8_t mode,
                TYPEDEF_VISION *Vision/* ��ͨ�Ӿ�*/
 							/*	VisionRxDataUnion *Vision ��Ԥ���Ӿ�*/,
                RUI_ROOT_STATUS_Typedef *Root,
-               MOTOR_Typdef *MOTOR,
+               MOTOR_Typedef *MOTOR,
                IMU_Data_t *IMU_Data,
 							 TD_t *TDDD,
 							VT13_Typedef* VT13_DBUS);

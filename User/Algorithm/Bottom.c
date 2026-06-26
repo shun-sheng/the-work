@@ -1,4 +1,5 @@
 #include "Bottom.h"
+#include "math.h"
 
 uint8_t MecanumInit(mecanumInit_typdef *mecanumInitT)
 {
@@ -79,4 +80,5 @@ void Omni_calc(float *wheel_rpm, float vx_temp, float vy_temp, float vr, OmniIni
     wheel_rpm[2] = (  -vx_temp - vy_temp + vr * (OmniInit_t->LENGTH_A+OmniInit_t->LENGTH_B))*wheel_rpm_ratio;//right
     wheel_rpm[3] = (  -vx_temp + vy_temp + vr * (OmniInit_t->LENGTH_A+OmniInit_t->LENGTH_B))*wheel_rpm_ratio;//back
 }
+
 

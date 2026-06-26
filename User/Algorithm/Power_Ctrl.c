@@ -52,7 +52,7 @@ void chassis_power_limit(DJI_MOTOR_Typedef *MOTOR, uint8_t p, model_t *model)
 
     if(MOTOR->PID_S.Output > 0)  // 根据原力矩方向选择计算公式
     {
-        float temp = (-b + Sqrt(b * b - 4 * model->a * c)) / (2 * model->a);
+        float temp = (-b + sqrt(b * b - 4 * model->a * c)) / (2 * model->a);
         if(temp > 16000)
         {
             MOTOR->PID_S.Output = 16000;
@@ -60,7 +60,7 @@ void chassis_power_limit(DJI_MOTOR_Typedef *MOTOR, uint8_t p, model_t *model)
             MOTOR->PID_S.Output = temp;
         }
     }else {
-        float temp = (-b - Sqrt(b * b - 4 * model->a * c)) / (2 * model->a);
+        float temp = (-b - sqrt(b * b - 4 * model->a * c)) / (2 * model->a);
         if (temp < -16000)
         {
             MOTOR->PID_S.Output = -16000;
@@ -146,7 +146,7 @@ uint8_t chassis_power_control(CONTAL_Typedef *RUI_V_CONTAL_V,
                            User_Data_T *usr_data,
                            model_t *model,
                            CAP_RXDATA *CAP_GET,
-                           MOTOR_Typdef *MOTOR)
+                           MOTOR_Typedef *MOTOR)
 {
     //*可编辑部分*begin*//
     const int16_t PowerCompensation = 15;  //正常模式下的功率补偿

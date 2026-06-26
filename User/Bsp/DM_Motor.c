@@ -136,7 +136,7 @@ void speed_ctrl(hcan_t* hcan,uint16_t motor_id, float vel)
   uint8_t *vbuf;
   uint8_t data[4];
 
-  id = motor_id + SPEED_MODE;
+  id = motor_id + SPD_MODE;
   vbuf=(uint8_t*)&vel;
 
   data[0] = *vbuf;

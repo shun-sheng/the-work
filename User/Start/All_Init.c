@@ -1,4 +1,9 @@
 #include "All_Init.h"
+#include "can.h"
+#include "usart.h"
+#include "tim.h"
+#include "dma.h"
+#include "spi.h"
 
 Mecanum_typdef MecanumData={0};
 
@@ -19,7 +24,7 @@ uint8_t Referee_Rx_Buf[2][REFEREE_RXFRAME_LENGTH];
 uint8_t RX[20];
 TD_t TDDDD;
 //电机
-MOTOR_Typdef ALL_MOTOR;
+MOTOR_Typedef ALL_MOTOR;
 
 //陀螺仪
 pid_type_def imu_temp;

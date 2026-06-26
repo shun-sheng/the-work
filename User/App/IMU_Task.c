@@ -1,4 +1,8 @@
 #include "IMU_Task.h"
+#include "pid_temp.h"
+#include "BMI088driver.h"
+#include "QuaternionEKF.h"
+#include "bsp_imu_pwm.h"
 #include "mahony_filter.h"
 #include <math.h>
 #include <string.h>

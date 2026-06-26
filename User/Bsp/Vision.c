@@ -1,5 +1,7 @@
 #include "usart.h"
 #include "Vision.h"
+#include "RUI_MATH.h"
+#include "usbd_cdc_if.h"
 
 
 #define VISION_D_SEND 24//16
@@ -71,7 +73,7 @@ uint8_t VISION_F_Cal(uint8_t *RxData, uint8_t type,TYPEDEF_VISION *VISION_DATA)
 uint8_t buff_flag = 0;
 uint8_t vision_sta;
 uint64_t Self_color;
-void VisionSendInit(union RUI_U_VISION_SEND*  Send_t,TYPEDEF_VISION *VISION_DATA,User_Data_T*User_Data_aaa,VT13_Typedef *DBUS_sss,IMU_Data_t *IMU_Data,MOTOR_Typdef*Motor_t,uint8_t bspeed)
+void VisionSendInit(union RUI_U_VISION_SEND*  Send_t,TYPEDEF_VISION *VISION_DATA,User_Data_T*User_Data_aaa,VT13_Typedef *DBUS_sss,IMU_Data_t *IMU_Data,MOTOR_Typedef*Motor_t,uint8_t bspeed)
 {
     static uint8_t buff_flag = 0;
     UpdateSimpleStateMachine(DBUS_sss->KeyBoard.F);
@@ -123,7 +125,7 @@ void VisionSendInit(union RUI_U_VISION_SEND*  Send_t,TYPEDEF_VISION *VISION_DATA
 /// @param buff 发送处理数据
 /// @param type 类型 0:虚拟串口 1:USART1
 /// @return 
-int ControltoVision(union RUI_U_VISION_SEND*  Send_t , uint8_t *buff, uint8_t type,User_Data_T *users,VT13_Typedef *VT13_DBUS,IMU_Data_t *IMU_Data,TYPEDEF_VISION *VISION_V_DATA,MOTOR_Typdef *ALL_MOTOR,uint8_t bspeed)
+int ControltoVision(union RUI_U_VISION_SEND*  Send_t , uint8_t *buff, uint8_t type,User_Data_T *users,VT13_Typedef *VT13_DBUS,IMU_Data_t *IMU_Data,TYPEDEF_VISION *VISION_V_DATA,MOTOR_Typedef *ALL_MOTOR,uint8_t bspeed)
 {
     uint8_t status;
    VisionSendInit(Send_t,VISION_V_DATA,users,VT13_DBUS,IMU_Data,ALL_MOTOR,bspeed);
@@ -390,7 +392,7 @@ void TOP_T_Cal_T()
 //    VisionTxDataUnion VisionTxData;
 //    VisionTemp Union_temppp;
 
-//void Vision_Tx_Data(MOTOR_Typdef *motor,IMU_Data_t *IMU,CONTAL_Typedef *CONTAL_A)
+//void Vision_Tx_Data(MOTOR_Typedef *motor,IMU_Data_t *IMU,CONTAL_Typedef *CONTAL_A)
 //{
 //    uint8_t i = 0;
 

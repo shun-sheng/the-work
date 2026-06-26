@@ -4,7 +4,7 @@ float monitor_Y;
 float monitor_W;
 float yaw_TD;
 float pitch_TD;
-static float counttt=0.0f;
+static float count=0.0f;
 float VISION_connect;
 void RobotTask(uint8_t mode,
                DBUS_Typedef *DBUS,
@@ -14,7 +14,7 @@ void RobotTask(uint8_t mode,
                TYPEDEF_VISION *Vision/* 普通视觉*/
 							/*	VisionRxDataUnion *Vision 加预测视觉*/,
                RUI_ROOT_STATUS_Typedef *Root,
-               MOTOR_Typdef *MOTOR,
+               MOTOR_Typedef *MOTOR,
                IMU_Data_t *IMU_Data,
 							 TD_t *TDDD,
 							VT13_Typedef* VT13_DBUS)
@@ -23,11 +23,68 @@ void RobotTask(uint8_t mode,
 
         case 1://底盘
         {
+            static float SLOW_START=0.0f;
+            static float FIX_ANGLE=0.0f;
+            static float FOLLOW_PREDICT=0.0f;
+            float MAX_POWER;
 
+            CONTAL->BOTTOM.VX=(float)DBUS->Remote.CH0*0.6;
+            CONTAL->BOTTOM.VY=(float)DBUS->Remote.CH1*0.6;
+            CONTAL->BOTTOM.VW=(float)DBUS->Remote.CH2*0.6;
+
+            if (CONTAL->BOTTOM.VX!=0.0f || CONTAL->BOTTOM.VY!=0.0f||CONTAL->BOTTOM.VW!=0.0f) {
+                SLOW_START+=0.002f;
+                float SLOW_START_MAX=RUI_F_CHASSIS_GET_MAX_TARGET(MAX_POWER);
+                if (SLOW_START>SLOW_START_MAX)
+                {
+                    SLOW_START=SLOW_START_MAX;
+
+                }
+            }
+            else
+                {
+                    SLOW_START=0.0;
+
+                }
+
+            CONTAL->BOTTOM.VX*=(1-VAL_LIMIT(0,2750,abs((FIX_ANGLE))/ 2750.0f));
+            CONTAL->BOTTOM.VY*=(1-VAL_LIMIT(0,2750,abs((FIX_ANGLE))/ 2750.0f));
+
+            CONTAL->BOTTOM.VX *= SLOW_START;
+            CONTAL->BOTTOM.VY *= SLOW_START;
+            CONTAL->BOTTOM.VW *= SLOW_START;
+
+            if (DBUS->Remote.S1)
+            {
+               CONTAL->BOTTOM.VW*=0.4;
+            }
+            if (CONTAL->BOTTOM.VW!=0||Root->RM_DBUS==RUI_DF_OFFLINE)
+            {
+                FIX_ANGLE=0;
+            }
+            else
+            {
+                float KP = 3.0f - (((float) DBUS->Remote.CH1 + RUI_F_MATH_Limit_float(660, -660, DBUS->Mouse.X_Flt)) / 220.0f );
+                VAL_LIMIT(KP,3.0f,5.0f);
+                //PID
+                FIX_ANGLE = RUI_F_CHASSIS_PID(CONTAL->CG.RELATIVE_ANGLE, KP, 0.00001f, 0.05f);
+                //FFC
+                RUI_V_FOLLOW_PREDICT = (float) ( DBUS->Remote.CH2 << 2 ) + VAL_LIMIT(DBUS->Mouse.X_Flt * 12, -660,660 );
+
+            }
+
+            /*麦轮解算*/
+            Chassis_ControlTask();
         } break;
 
         case 2://云台
         {
+            CONTAL->HEAD.Pitch=(float)DBUS->Remote.CH3*0.3;
+            CONTAL->HEAD.Yaw=(float)DBUS->Remote.CH2*0.3;
+            VAL_LIMIT(CONTAL->HEAD.Pitch,CONTAL->HEAD.Pitch_MIN,CONTAL->HEAD.Pitch_MAX);
+           // VAL_LIMIT(CONTAL->HEAD.Yaw,CONTAL->HEAD.)
+            Gimbal_Task(&RUI_V_CONTAL,&ALL_MOTOR,&IMU_Data);
+
 
         } break;
 
@@ -166,3 +223,4 @@ float RUI_F_CHASSIS_PID(int16_t RELATIVE_ANGLE, float KP, float KI, float KD)
 
     return OUTPUT;
 }
+

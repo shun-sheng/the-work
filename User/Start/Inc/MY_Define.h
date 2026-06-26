@@ -43,7 +43,23 @@
 #include "cmsis_os.h"
 #include "dsp/matrix_functions.h"
 #include "dsp/fast_math_functions.h"
-#include  "controller.h"
+#include  "DJI_Motor.h"
+#include "RUI_MATH.h"
+#include  "Chassis_Task.h"
+#include "Robot.h"
+#include "All_Init.h"
+#include  "can_bsp.h"
+#include  "IMU_Task.h"
+#include  "bsp_dwt.h"
+#include "BMI088driver.h"
+#include  "mahony_filter.h"
+#include  "QuaternionEKF.h"
+#include "pid_temp.h"
+#include "VT13.h"
+#include "Referee.h"
+#include "usart.h"
+#include "can.h"
+#include "Gimbal_Task.h"
 /* ============================================================
  * X-MACRO 数据表
  *
@@ -220,6 +236,11 @@
 #define GIMBAL_PIT_MIN            -17
 #define OMNI_PIT_MAX               5200
 #define OMNI_PIT_MIN               4270
+
+/* ---------- 云台 Yaw 限位 ---------- */
+#define GIMBAL_YAW_MAX             180.0f       /* 最大偏航角度 */
+#define GIMBAL_YAW_MIN            -180.0f       /* 最小偏航角度 */
+#define GIMBAL_YAW_TOTAL_MAX       720.0f       /* 累计最大圈数角度（防绕线） */
 
 /* ---------- 底盘参数 ---------- */
 #define CHASSIS_SPIN_SPEED_DEFAULT 180.0f
@@ -1942,5 +1963,7 @@ extern uint8_t anonymity_au8[70];
 /* ---------- 以下类型定义散落在 BSP 驱动中，在当前文件仅为前向声明 ---------- */
 extern struct CanCommunit_typedef CanCommunit_t;
 extern struct gimbal_typedef gimbal_t;
+
+#include  "controller.h"
 
 #endif /* __MY_DEFINE */

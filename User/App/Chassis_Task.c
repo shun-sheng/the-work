@@ -1,6 +1,5 @@
 #include "Chassis_Task.h"
 
-
 void CHhassiswheel_PID_Init(MOTOR_Typedef *ALL_MOTOR,Average *ALL_Average_Speed)
 {
 
@@ -128,38 +127,37 @@ void Chassis_MecanumInit(void)
 
 void Chassis_MecanumResolve(float Vx, float Vy, float Vr, float Angle)
 {
-  float tempMax = 0;//寻锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷值
+  float tempMax = 0;
   float AngleSin = 0;
   float AngleCos = 0;
 
   float angleSin = 0.0f, angleCos = 0.0f;
   float Vxout=0,Vyout=0;
 
-  //锟矫碉拷锟斤拷越嵌鹊锟絪in锟斤拷cos
+
   angleSin = sinf(Angle);
   angleCos = cosf(Angle);
-  //锟矫碉拷转锟斤拷锟斤拷锟絭x,vy,vr
+
   Vxout = -Vy * angleSin + Vx * angleCos;
   Vyout = Vy * angleCos + Vx * angleSin;
 
   LimitMax(Vxout, MecanumData.Max_vx_speed);
   LimitMax(Vyout, MecanumData.Max_vy_speed);
   LimitMax(Vr, MecanumData.Max_vr_speed);
-  //锟斤拷锟街斤拷锟斤拷
+
   MecanumData.MecanumOut[0] = (Vxout + Vyout - Vr * MecanumData.raid_fl) * MecanumData.Wheel_rpm_ratio;
   MecanumData.MecanumOut[1] = (-Vxout + Vyout - Vr * MecanumData.raid_fr) * MecanumData.Wheel_rpm_ratio;
   MecanumData.MecanumOut[2] = (-Vxout - Vyout - Vr * MecanumData.raid_br) * MecanumData.Wheel_rpm_ratio;
   MecanumData.MecanumOut[3] = (Vxout - Vyout - Vr * MecanumData.raid_bl) * MecanumData.Wheel_rpm_ratio;
-  //  PowerMAXOutLimit(10000,MecanumData.MecanumOut);
-  // 寻锟斤拷锟斤拷锟斤拷锟斤拷值
+
   for (uint8_t i = 0; i < 4; i++)
   {
-    if (RUI_F_MATH_ABS_float(MecanumData.MecanumOut[i]) >= tempMax)
+    if (abs(MecanumData.MecanumOut[i]) >= tempMax)
     {
-      tempMax = RUI_F_MATH_ABS_float(MecanumData.MecanumOut[i]);
+      tempMax = abs(MecanumData.MecanumOut[i]);
     }
   }
-  // 锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟街碉拷锟斤拷锟斤拷母锟斤拷锟斤拷咏锟斤拷械缺锟斤拷锟斤拷锟斤拷锟�
+
   if (tempMax > MecanumData.Max_wheel_ramp)
   {
     float rate = MecanumData.Max_wheel_ramp / tempMax;
@@ -171,11 +169,11 @@ void Chassis_MecanumResolve(float Vx, float Vy, float Vr, float Angle)
 }
 
 
-void Chassis_SpinInit(void)
-{
-    MecanumData.Spin_Flag = CHASSIS_NORMAL_MODE;
-    MecanumData.Spin_Speed = CHASSIS_SPIN_SPEED_DEFAULT;
-}
+// void Chassis_SpinInit(void)
+// {
+//     MecanumData.Spin_Flag = CHASSIS_NORMAL_MODE;
+//     MecanumData.Spin_Speed = CHASSIS_SPIN_SPEED_DEFAULT;
+// }
 
 
 void Chassis_ControlTask(void)
@@ -187,40 +185,40 @@ void Chassis_ControlTask(void)
     int8_t vx_dir = 0, vy_dir = 0;
 
 
-        /* ----- 遥控模式 ----- */
-        /* CH3: 左摇杆左右 → Vx (平移) */
-        if (RUI_F_MATH_ABS_int16_t(DBUS.Remote.CH3) > CHASSIS_SPIN_DEADBAND)
-        {
-            speed_scale = (float)DBUS.Remote.CH3 / CHASSIS_SPEED_SCALE_MAX;
-            Vx = speed_scale * (float)MecanumData.Max_vx_speed;
-        }
-        /* CH2: 左摇杆前后 → Vy (前进) */
-        if (RUI_F_MATH_ABS_int16_t(DBUS.Remote.CH2) > CHASSIS_SPIN_DEADBAND)
-        {
-            speed_scale = (float)DBUS.Remote.CH2 / CHASSIS_SPEED_SCALE_MAX;
-            Vy = speed_scale * (float)MecanumData.Max_vy_speed;
-        }
-        /* CH0: 右摇杆左右 → Vr (旋转) */
-        if (RUI_F_MATH_ABS_int16_t(DBUS.Remote.CH0) > CHASSIS_SPIN_DEADBAND)
-        {
-            speed_scale = (float)DBUS.Remote.CH0 / CHASSIS_SPEED_SCALE_MAX;
-            Vr = speed_scale * (float)MecanumData.Max_vr_speed;
-        }
+    // /* ----- 遥控模式 ----- */
+    // /* CH3: 左摇杆左右 → Vx (平移) */
+    // if (abs(DBUS.Remote.CH3) > CHASSIS_SPIN_DEADBAND)
+    // {
+    //     speed_scale = (float)DBUS.Remote.CH3 / CHASSIS_SPEED_SCALE_MAX;
+    //     Vx = speed_scale * (float)MecanumData.Max_vx_speed;
+    // }
+    // /* CH2: 左摇杆前后 → Vy (前进) */
+    // if (abs(DBUS.Remote.CH2) > CHASSIS_SPIN_DEADBAND)
+    // {
+    //     speed_scale = (float)DBUS.Remote.CH2 / CHASSIS_SPEED_SCALE_MAX;
+    //     Vy = speed_scale * (float)MecanumData.Max_vy_speed;
+    // }
+    // /* CH0: 右摇杆左右 → Vr (旋转) */
+    // if (abs(DBUS.Remote.CH0) > CHASSIS_SPIN_DEADBAND)
+    // {
+    //     speed_scale = (float)DBUS.Remote.CH0 / CHASSIS_SPEED_SCALE_MAX;
+    //     Vr = speed_scale * (float)MecanumData.Max_vr_speed;
+    // }
 
 
-    /* ============================================================
-       2. 小陀螺自旋模式
-          开启后Vr固定为自旋速度
-          使用IMU航向角做场定向控制(矢量定心)
-       ============================================================ */
-    MecanumData.Spin_Flag = DBUS.Remote.S2;
-
-    if (MecanumData.Spin_Flag == CHASSIS_SPIN_MODE)
-    {
-        Vr = MecanumData.Spin_Speed;
-        /* IMU航向角: 度→弧度, 用于场定向控制 */
-        Angle = IMU_Data.yaw / radian_angle;
-    }
+    // /* ============================================================
+    //    2. 小陀螺自旋模式
+    //       开启后Vr固定为自旋速度
+    //       使用IMU航向角做场定向控制(矢量定心)
+    //    ============================================================ */
+    // MecanumData.Spin_Flag = DBUS.Remote.S2;
+    //
+    // if (MecanumData.Spin_Flag == CHASSIS_SPIN_MODE)
+    // {
+    //     Vr = MecanumData.Spin_Speed;
+    //     /* IMU航向角: 度→弧度, 用于场定向控制 */
+    //     Angle = IMU_Data.yaw / radian_angle;
+    // }
 
     /* ============================================================
        3. 麦轮逆解算 (角度用于场定向旋转Vx/Vy)
