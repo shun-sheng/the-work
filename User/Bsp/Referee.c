@@ -1,5 +1,6 @@
 #include "Referee.h"
 #include "usart.h"
+#include "CRC_DJI.h"
 #include <stdbool.h>
 
 static void Referee_System_Info_Update(uint16_t cmd_id, uint8_t *data_ptr, User_Data_T *usr_data);

@@ -15,6 +15,7 @@
  */
 #include "QuaternionEKF.h"
 #include "user_lib.h"
+#include "kalman_filter.h"
 
 QEKF_INS_t QEKF_INS={0};
 
@@ -41,7 +42,7 @@ float IMU_QuaternionEKF_P[36] = {100000, 0.1, 0.1, 0.1, 0.1, 0.1,
 float IMU_QuaternionEKF_K[18];
 float IMU_QuaternionEKF_H[18];
 
-static float invSqrt(float x);
+float invSqrt(float x);
 static void IMU_QuaternionEKF_Observe(KalmanFilter_t *kf);
 static void IMU_QuaternionEKF_F_Linearization_P_Fading(KalmanFilter_t *kf);
 static void IMU_QuaternionEKF_SetH(KalmanFilter_t *kf);
@@ -528,7 +529,7 @@ float Get_YawTotalAngle()
  * @param x x
  * @return float
  */
-static float invSqrt(float x)
+float invSqrt(float x)
 {
 	volatile float tmp = 1.0f;
 	tmp /= Sqrt(x);

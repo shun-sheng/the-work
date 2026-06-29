@@ -1,4 +1,8 @@
 #include "Robot.h"
+#include "Gimbal_Task.h"
+#include "Chassis_Task.h"
+#include "user_lib.h"
+#include "RUI_MATH.h"
 float monitor_X;
 float monitor_Y;
 float monitor_W;
@@ -6,6 +10,7 @@ float yaw_TD;
 float pitch_TD;
 static float count=0.0f;
 float VISION_connect;
+float RUI_V_FOLLOW_PREDICT = 0;
 void RobotTask(uint8_t mode,
                DBUS_Typedef *DBUS,
                CONTAL_Typedef *CONTAL,
@@ -28,9 +33,9 @@ void RobotTask(uint8_t mode,
             static float FOLLOW_PREDICT=0.0f;
             float MAX_POWER;
 
-            CONTAL->BOTTOM.VX=(float)DBUS->Remote.CH0*0.6;
-            CONTAL->BOTTOM.VY=(float)DBUS->Remote.CH1*0.6;
-            CONTAL->BOTTOM.VW=(float)DBUS->Remote.CH2*0.6;
+            CONTAL->BOTTOM.VX=(float)DBUS->Remote.CH1*0.6;
+            CONTAL->BOTTOM.VY=(float)DBUS->Remote.CH0*0.6;
+            CONTAL->BOTTOM.VW=(float)DBUS->Remote.CH3*0.6;
 
             if (CONTAL->BOTTOM.VX!=0.0f || CONTAL->BOTTOM.VY!=0.0f||CONTAL->BOTTOM.VW!=0.0f) {
                 SLOW_START+=0.002f;
@@ -47,8 +52,8 @@ void RobotTask(uint8_t mode,
 
                 }
 
-            CONTAL->BOTTOM.VX*=(1-VAL_LIMIT(0,2750,abs((FIX_ANGLE))/ 2750.0f));
-            CONTAL->BOTTOM.VY*=(1-VAL_LIMIT(0,2750,abs((FIX_ANGLE))/ 2750.0f));
+            CONTAL->BOTTOM.VX*=(1-float_constrain(abs((FIX_ANGLE))/2750.0f, 0, 2750));
+            CONTAL->BOTTOM.VY*=(1-float_constrain(abs((FIX_ANGLE))/2750.0f, 0, 2750));
 
             CONTAL->BOTTOM.VX *= SLOW_START;
             CONTAL->BOTTOM.VY *= SLOW_START;
@@ -64,12 +69,12 @@ void RobotTask(uint8_t mode,
             }
             else
             {
-                float KP = 3.0f - (((float) DBUS->Remote.CH1 + RUI_F_MATH_Limit_float(660, -660, DBUS->Mouse.X_Flt)) / 220.0f );
+                float KP = 3.0f - (((float) DBUS->Remote.CH1 + float_constrain(DBUS->Mouse.X_Flt, -660, 660)) / 220.0f );
                 VAL_LIMIT(KP,3.0f,5.0f);
                 //PID
                 FIX_ANGLE = RUI_F_CHASSIS_PID(CONTAL->CG.RELATIVE_ANGLE, KP, 0.00001f, 0.05f);
                 //FFC
-                RUI_V_FOLLOW_PREDICT = (float) ( DBUS->Remote.CH2 << 2 ) + VAL_LIMIT(DBUS->Mouse.X_Flt * 12, -660,660 );
+                RUI_V_FOLLOW_PREDICT = (float) ( DBUS->Remote.CH2 << 2 ) + float_constrain(DBUS->Mouse.X_Flt * 12, -660,660 );
 
             }
 
@@ -83,7 +88,7 @@ void RobotTask(uint8_t mode,
             CONTAL->HEAD.Yaw=(float)DBUS->Remote.CH2*0.3;
             VAL_LIMIT(CONTAL->HEAD.Pitch,CONTAL->HEAD.Pitch_MIN,CONTAL->HEAD.Pitch_MAX);
            // VAL_LIMIT(CONTAL->HEAD.Yaw,CONTAL->HEAD.)
-            Gimbal_Task(&RUI_V_CONTAL,&ALL_MOTOR,&IMU_Data);
+            Gimbal_Task(&RUI_V_CONTAL,&ALL_MOTOR,IMU_Data);
 
 
         } break;

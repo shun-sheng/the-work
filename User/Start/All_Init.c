@@ -4,6 +4,11 @@
 #include "tim.h"
 #include "dma.h"
 #include "spi.h"
+#include "usb_device.h"
+#include "log.h"
+#include "CANSPI.h"
+#include "can_bsp.h"
+#include "bsp_dwt.h"
 
 Mecanum_typdef MecanumData={0};
 

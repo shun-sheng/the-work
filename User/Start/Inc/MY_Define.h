@@ -43,23 +43,7 @@
 #include "cmsis_os.h"
 #include "dsp/matrix_functions.h"
 #include "dsp/fast_math_functions.h"
-#include  "DJI_Motor.h"
-#include "RUI_MATH.h"
-#include  "Chassis_Task.h"
-#include "Robot.h"
-#include "All_Init.h"
-#include  "can_bsp.h"
-#include  "IMU_Task.h"
-#include  "bsp_dwt.h"
-#include "BMI088driver.h"
-#include  "mahony_filter.h"
-#include  "QuaternionEKF.h"
-#include "pid_temp.h"
-#include "VT13.h"
-#include "Referee.h"
-#include "usart.h"
-#include "can.h"
-#include "Gimbal_Task.h"
+
 /* ============================================================
  * X-MACRO 数据表
  *
@@ -1527,6 +1511,36 @@ typedef union {
 
     uint8_t Data[255];
 } ALL_RX_Data_T;
+//板间通信发送与接收联合体
+typedef union
+{
+    struct __packed
+    {
+        uint8_t remote_ch[8];
+        uint8_t remote_s[8];
+        uint8_t Y_w[8];
+        uint8_t Z_w[8];
+
+    } Send_Data;
+
+    struct  __packed
+    {
+        IMU_Data_t IMU_Data;
+        DBUS_Typedef DBUS;
+        float Chassis_Vw;
+        float Gimbal_Yaw_rad;
+        float Gimabal_Yaw_degree;
+    }Receive_Data;
+}board_Data_t;
+
+typedef union
+{
+    struct __packed
+    {
+        float yaw_imu;
+    } dataNeaten;
+    uint8_t rxData[8];
+}boardRxData_t;
 
 /* ============================================================
  * 视觉/陀螺仪结构体
@@ -1964,6 +1978,29 @@ extern uint8_t anonymity_au8[70];
 extern struct CanCommunit_typedef CanCommunit_t;
 extern struct gimbal_typedef gimbal_t;
 
+/* ============================================================
+ * BSP/App 头文件（放在末尾：所有类型已定义，BSP 头文件可见）
+ * 你写的新函数头文件加在这里，全工程可见。
+ * ============================================================ */
 #include  "controller.h"
+#include  "DJI_Motor.h"
+#include "RUI_MATH.h"
+#include  "Chassis_Task.h"
+#include "Robot.h"
+#include "All_Init.h"
+#include  "can_bsp.h"
+#include  "IMU_Task.h"
+#include  "bsp_dwt.h"
+#include "BMI088driver.h"
+#include  "mahony_filter.h"
+#include  "QuaternionEKF.h"
+#include "pid_temp.h"
+#include "VT13.h"
+#include "Referee.h"
+#include "usart.h"
+#include "can.h"
+#include "Gimbal_Task.h"
+#include "DBUS.h"
+#include "Board_to_Board.h"
 
 #endif /* __MY_DEFINE */

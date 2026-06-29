@@ -4,6 +4,7 @@
 
 
 #include "MY_Define.h"
+#include "can_bsp.h"
 
 void MOTOR_CAN_RX_3508RM(DJI_MOTOR_DATA_Typedef* DATA , uint8_t* can_data);
 void MOTOR_CAN_RX_2006RM(DJI_MOTOR_DATA_Typedef* DATA , uint8_t* can_data);

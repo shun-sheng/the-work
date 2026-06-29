@@ -1,4 +1,7 @@
 #include "Chassis_Task.h"
+#include "controller.h"
+#include "can.h"
+#include "DJI_Motor.h"
 
 void CHhassiswheel_PID_Init(MOTOR_Typedef *ALL_MOTOR,Average *ALL_Average_Speed)
 {

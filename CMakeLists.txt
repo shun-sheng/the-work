@@ -25,7 +25,8 @@ add_executable(${CMAKE_PROJECT_NAME}
         User/Bsp/RUI_MATH.c
         User/App/inc/Chassis_Task.h
         User/Bsp/inc/RUI_MATH.h
-        User/App/inc/Shoot_Task.h)
+        User/App/inc/Shoot_Task.h
+        User/App/Board_to_Board.c)
 
 
 add_subdirectory(cmake/stm32cubemx)

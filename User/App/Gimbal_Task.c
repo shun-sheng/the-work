@@ -1,4 +1,5 @@
 #include "Gimbal_Task.h"
+#include "controller.h"
 #include "can.h"
 #include "DJI_Motor.h"
 
