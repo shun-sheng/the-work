@@ -1,0 +1,11 @@
+{
+	"InstallScripts" : 
+	[
+		"E:/RoboMaster/C_Board_Framework_Old/C_Board_Framework_Old/cmake-build-debug/cmake_install.cmake",
+		"E:/RoboMaster/C_Board_Framework_Old/C_Board_Framework_Old/cmake-build-debug/cmake/stm32cubemx/cmake_install.cmake",
+		"E:/RoboMaster/C_Board_Framework_Old/C_Board_Framework_Old/cmake-build-debug/Middlewares/CMSIS/cmake_install.cmake",
+		"E:/RoboMaster/C_Board_Framework_Old/C_Board_Framework_Old/cmake-build-debug/Middlewares/SEGGER_RTT/cmake_install.cmake",
+		"E:/RoboMaster/C_Board_Framework_Old/C_Board_Framework_Old/cmake-build-debug/User/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
