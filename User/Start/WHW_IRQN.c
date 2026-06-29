@@ -1,6 +1,6 @@
 #include "WHW_IRQN.h"
 #include "DBUS.h"
-
+#include  "Robot.h"
 
 //34ms,画UI任务
 void StartRobotUITask(void const * argument)
@@ -22,14 +22,14 @@ void StartMoveTask(void const * argument)
 {
     portTickType currentTimeMove;
     currentTimeMove = xTaskGetTickCount();
-
+	MecanumInit(&MecanumData);
+	Chassiswheel_PID_Init(&ALL_MOTOR);
+	Gimbal_PID_Init(&ALL_MOTOR);
     for (;;)
     {
-    	RobotTask(1, &DBUS, &RUI_V_CONTAL, &User_data,
-				  &CAPDATE, &VISION_V_DATA.RECEIVE.DATA, &RUI_ROOT_STATUS);
+    	Chassis_Task();
+    	Gimbal_Task(&RUI_V_CONTAL,&ALL_MOTOR,&IMU_Data);
 
-    	RobotTask(2, &DBUS, &RUI_V_CONTAL, &User_data,
-				 &CAPDATE, &VISION_V_DATA.RECEIVE.DATA, &RUI_ROOT_STATUS);
 
 
     	vTaskDelay (1);
@@ -128,24 +128,24 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef* hcan)
 		switch (can_rx.StdId)
 		{
 			case 0x201:
-				MOTOR_CAN_RX_3508RM(&ALL_MOTOR.DJI_3508_Chassis_1, rx_data);
+				MOTOR_CAN_RX_3508RM(&ALL_MOTOR.DJI_3508_Chassis_1.DATA, rx_data);
 				break;
 			case 0x202:
-				MOTOR_CAN_RX_3508RM(&ALL_MOTOR.DJI_3508_Chassis_2,rx_data);
+				MOTOR_CAN_RX_3508RM(&ALL_MOTOR.DJI_3508_Chassis_2.DATA,rx_data);
 				break;
 			case 0x203:
-				MOTOR_CAN_RX_3508RM(&ALL_MOTOR.DJI_3508_Chassis_3,rx_data);
+				MOTOR_CAN_RX_3508RM(&ALL_MOTOR.DJI_3508_Chassis_3.DATA,rx_data);
 				break;
 			case 0x204:
-				MOTOR_CAN_RX_3508RM(&ALL_MOTOR.DJI_3508_Chassis_4,rx_data);
+				MOTOR_CAN_RX_3508RM(&ALL_MOTOR.DJI_3508_Chassis_4.DATA,rx_data);
 				break;
 
 
 			case 0x301:
-				MOTOR_CAN_RX_3508RM(&ALL_MOTOR.DJI_6020_Yaw,rx_data);
+				MOTOR_CAN_RX_3508RM(&ALL_MOTOR.DJI_6020_Yaw.DATA,rx_data);
 				break;
 			case 0x302:
-				MOTOR_CAN_RX_3508RM(&ALL_MOTOR.DJI_6020_Pitch,rx_data);
+				MOTOR_CAN_RX_3508RM(&ALL_MOTOR.DJI_6020_Pitch.DATA,rx_data);
 				break;
 			default:
 				break;

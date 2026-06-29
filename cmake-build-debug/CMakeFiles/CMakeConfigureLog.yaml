@@ -4964,8 +4964,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "E:/RoboMaster/C_Board_Framework_Old/C_Board_Framework_Old/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ympzle"
-      binary: "E:/RoboMaster/C_Board_Framework_Old/C_Board_Framework_Old/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ympzle"
+      source: "E:/RoboMaster/C_Board_Framework_Old/C_Board_Framework_Old/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-c97wp5"
+      binary: "E:/RoboMaster/C_Board_Framework_Old/C_Board_Framework_Old/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-c97wp5"
     cmakeVariables:
       CMAKE_C_FLAGS: " -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections"
       CMAKE_C_FLAGS_DEBUG: "-O0 -g3"
@@ -4974,10 +4974,10 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'E:/RoboMaster/C_Board_Framework_Old/C_Board_Framework_Old/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ympzle'
+        Change Dir: 'E:/RoboMaster/C_Board_Framework_Old/C_Board_Framework_Old/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-c97wp5'
         
-        Run Build Command(s): "E:/CLion 2025.3.3/bin/ninja/win/x64/ninja.exe" -v cmTC_89917
-        [1/2] E:\\RoboMaster\\OpenOCD\\DevEnv\\GNU-tools-for-STM32\\bin\\arm-none-eabi-gcc.exe   -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections    -v -o CMakeFiles/cmTC_89917.dir/CMakeCCompilerABI.c.obj -c "E:/CLion 2025.3.3/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeCCompilerABI.c"
+        Run Build Command(s): "E:/CLion 2025.3.3/bin/ninja/win/x64/ninja.exe" -v cmTC_245fa
+        [1/2] E:\\RoboMaster\\OpenOCD\\DevEnv\\GNU-tools-for-STM32\\bin\\arm-none-eabi-gcc.exe   -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections    -v -o CMakeFiles/cmTC_245fa.dir/CMakeCCompilerABI.c.obj -c "E:/CLion 2025.3.3/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeCCompilerABI.c"
         Using built-in specs.
         COLLECT_GCC=E:\\RoboMaster\\OpenOCD\\DevEnv\\GNU-tools-for-STM32\\bin\\arm-none-eabi-gcc.exe
         Target: arm-none-eabi
@@ -4985,8 +4985,8 @@ events:
         Thread model: single
         Supported LTO compression algorithms: zlib
         gcc version 13.3.1 20240614 (GNU Tools for STM32 13.3.rel1.20240926-1715) 
-        COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-v' '-o' 'CMakeFiles/cmTC_89917.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_89917.dir/'
-         E:/RoboMaster/OpenOCD/DevEnv/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/cc1.exe -quiet -v -imultilib thumb/v7e-m+fp/hard -iprefix E:\\RoboMaster\\OpenOCD\\DevEnv\\GNU-tools-for-STM32\\bin\\../lib/gcc/arm-none-eabi/13.3.1/ -isysroot E:\\RoboMaster\\OpenOCD\\DevEnv\\GNU-tools-for-STM32\\bin\\../arm-none-eabi -D__USES_INITFINI__ E:/CLion 2025.3.3/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_89917.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -mlibarch=armv7e-m+fp -march=armv7e-m+fp -Wall -version -fdata-sections -ffunction-sections -o C:\\Users\\lenovo\\AppData\\Local\\Temp\\cchdOy5Q.s
+        COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-v' '-o' 'CMakeFiles/cmTC_245fa.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_245fa.dir/'
+         E:/RoboMaster/OpenOCD/DevEnv/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/cc1.exe -quiet -v -imultilib thumb/v7e-m+fp/hard -iprefix E:\\RoboMaster\\OpenOCD\\DevEnv\\GNU-tools-for-STM32\\bin\\../lib/gcc/arm-none-eabi/13.3.1/ -isysroot E:\\RoboMaster\\OpenOCD\\DevEnv\\GNU-tools-for-STM32\\bin\\../arm-none-eabi -D__USES_INITFINI__ E:/CLion 2025.3.3/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_245fa.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -mlibarch=armv7e-m+fp -march=armv7e-m+fp -Wall -version -fdata-sections -ffunction-sections -o C:\\Users\\lenovo\\AppData\\Local\\Temp\\ccNzpr5E.s
         GNU C17 (GNU Tools for STM32 13.3.rel1.20240926-1715) version 13.3.1 20240614 (arm-none-eabi)
         	compiled by GNU C version 7.3-win32 20180312, GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
         
@@ -5003,13 +5003,13 @@ events:
          E:/RoboMaster/OpenOCD/DevEnv/GNU-tools-for-STM32/lib/gcc/../../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/include
         End of search list.
         Compiler executable checksum: ff0140b734b22faecf673fec3a6a923f
-        COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-v' '-o' 'CMakeFiles/cmTC_89917.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_89917.dir/'
-         E:/RoboMaster/OpenOCD/DevEnv/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv7e-m+fp -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mfpu=fpv4-sp-d16 -meabi=5 -o CMakeFiles/cmTC_89917.dir/CMakeCCompilerABI.c.obj C:\\Users\\lenovo\\AppData\\Local\\Temp\\cchdOy5Q.s
+        COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-v' '-o' 'CMakeFiles/cmTC_245fa.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_245fa.dir/'
+         E:/RoboMaster/OpenOCD/DevEnv/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv7e-m+fp -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mfpu=fpv4-sp-d16 -meabi=5 -o CMakeFiles/cmTC_245fa.dir/CMakeCCompilerABI.c.obj C:\\Users\\lenovo\\AppData\\Local\\Temp\\ccNzpr5E.s
         GNU assembler version 2.42.0 (arm-none-eabi) using BFD version (GNU Tools for STM32 13.3.rel1.20240926-1715) 2.42.0.20240614
         COMPILER_PATH=E:/RoboMaster/OpenOCD/DevEnv/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/;E:/RoboMaster/OpenOCD/DevEnv/GNU-tools-for-STM32/bin/../lib/gcc/;E:/RoboMaster/OpenOCD/DevEnv/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/
         LIBRARY_PATH=E:/RoboMaster/OpenOCD/DevEnv/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/;E:/RoboMaster/OpenOCD/DevEnv/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/;E:/RoboMaster/OpenOCD/DevEnv/GNU-tools-for-STM32/bin/../arm-none-eabi/lib/thumb/v7e-m+fp/hard/;E:/RoboMaster/OpenOCD/DevEnv/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/;E:/RoboMaster/OpenOCD/DevEnv/GNU-tools-for-STM32/bin/../lib/gcc/;E:/RoboMaster/OpenOCD/DevEnv/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/;E:/RoboMaster/OpenOCD/DevEnv/GNU-tools-for-STM32/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-v' '-o' 'CMakeFiles/cmTC_89917.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_89917.dir/CMakeCCompilerABI.c.'\x0d
-        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "E:\\CLion 2025.3.3\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E rm -f libcmTC_89917.a && E:\\RoboMaster\\OpenOCD\\DevEnv\\GNU-tools-for-STM32\\bin\\arm-none-eabi-ar.exe qc libcmTC_89917.a  CMakeFiles/cmTC_89917.dir/CMakeCCompilerABI.c.obj && E:\\RoboMaster\\OpenOCD\\DevEnv\\GNU-tools-for-STM32\\bin\\arm-none-eabi-ranlib.exe libcmTC_89917.a && cd ."
+        COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-v' '-o' 'CMakeFiles/cmTC_245fa.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_245fa.dir/CMakeCCompilerABI.c.'\x0d
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "E:\\CLion 2025.3.3\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E rm -f libcmTC_245fa.a && E:\\RoboMaster\\OpenOCD\\DevEnv\\GNU-tools-for-STM32\\bin\\arm-none-eabi-ar.exe qc libcmTC_245fa.a  CMakeFiles/cmTC_245fa.dir/CMakeCCompilerABI.c.obj && E:\\RoboMaster\\OpenOCD\\DevEnv\\GNU-tools-for-STM32\\bin\\arm-none-eabi-ranlib.exe libcmTC_245fa.a && cd ."
         
       exitCode: 0
   -
@@ -5048,10 +5048,10 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(arm-none-eabi-g\\+\\+\\.exe|;ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(arm-none-eabi-g\\+\\+\\.exe|;ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: 'E:/RoboMaster/C_Board_Framework_Old/C_Board_Framework_Old/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ympzle']
+        ignore line: [Change Dir: 'E:/RoboMaster/C_Board_Framework_Old/C_Board_Framework_Old/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-c97wp5']
         ignore line: []
-        ignore line: [Run Build Command(s): "E:/CLion 2025.3.3/bin/ninja/win/x64/ninja.exe" -v cmTC_89917]
-        ignore line: [[1/2] E:\\RoboMaster\\OpenOCD\\DevEnv\\GNU-tools-for-STM32\\bin\\arm-none-eabi-gcc.exe   -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections    -v -o CMakeFiles/cmTC_89917.dir/CMakeCCompilerABI.c.obj -c "E:/CLion 2025.3.3/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeCCompilerABI.c"]
+        ignore line: [Run Build Command(s): "E:/CLion 2025.3.3/bin/ninja/win/x64/ninja.exe" -v cmTC_245fa]
+        ignore line: [[1/2] E:\\RoboMaster\\OpenOCD\\DevEnv\\GNU-tools-for-STM32\\bin\\arm-none-eabi-gcc.exe   -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections    -v -o CMakeFiles/cmTC_245fa.dir/CMakeCCompilerABI.c.obj -c "E:/CLion 2025.3.3/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeCCompilerABI.c"]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=E:\\RoboMaster\\OpenOCD\\DevEnv\\GNU-tools-for-STM32\\bin\\arm-none-eabi-gcc.exe]
         ignore line: [Target: arm-none-eabi]
@@ -5059,8 +5059,8 @@ events:
         ignore line: [Thread model: single]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 13.3.1 20240614 (GNU Tools for STM32 13.3.rel1.20240926-1715) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-v' '-o' 'CMakeFiles/cmTC_89917.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_89917.dir/']
-        ignore line: [ E:/RoboMaster/OpenOCD/DevEnv/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/cc1.exe -quiet -v -imultilib thumb/v7e-m+fp/hard -iprefix E:\\RoboMaster\\OpenOCD\\DevEnv\\GNU-tools-for-STM32\\bin\\../lib/gcc/arm-none-eabi/13.3.1/ -isysroot E:\\RoboMaster\\OpenOCD\\DevEnv\\GNU-tools-for-STM32\\bin\\../arm-none-eabi -D__USES_INITFINI__ E:/CLion 2025.3.3/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_89917.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -mlibarch=armv7e-m+fp -march=armv7e-m+fp -Wall -version -fdata-sections -ffunction-sections -o C:\\Users\\lenovo\\AppData\\Local\\Temp\\cchdOy5Q.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-v' '-o' 'CMakeFiles/cmTC_245fa.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_245fa.dir/']
+        ignore line: [ E:/RoboMaster/OpenOCD/DevEnv/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/cc1.exe -quiet -v -imultilib thumb/v7e-m+fp/hard -iprefix E:\\RoboMaster\\OpenOCD\\DevEnv\\GNU-tools-for-STM32\\bin\\../lib/gcc/arm-none-eabi/13.3.1/ -isysroot E:\\RoboMaster\\OpenOCD\\DevEnv\\GNU-tools-for-STM32\\bin\\../arm-none-eabi -D__USES_INITFINI__ E:/CLion 2025.3.3/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_245fa.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -mlibarch=armv7e-m+fp -march=armv7e-m+fp -Wall -version -fdata-sections -ffunction-sections -o C:\\Users\\lenovo\\AppData\\Local\\Temp\\ccNzpr5E.s]
         ignore line: [GNU C17 (GNU Tools for STM32 13.3.rel1.20240926-1715) version 13.3.1 20240614 (arm-none-eabi)]
         ignore line: [	compiled by GNU C version 7.3-win32 20180312  GMP version 6.2.1  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.15-1-g835ea3a-GMP]
         ignore line: []
@@ -5077,8 +5077,8 @@ events:
         ignore line: [ E:/RoboMaster/OpenOCD/DevEnv/GNU-tools-for-STM32/lib/gcc/../../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: ff0140b734b22faecf673fec3a6a923f]
-        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-v' '-o' 'CMakeFiles/cmTC_89917.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_89917.dir/']
-        ignore line: [ E:/RoboMaster/OpenOCD/DevEnv/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv7e-m+fp -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mfpu=fpv4-sp-d16 -meabi=5 -o CMakeFiles/cmTC_89917.dir/CMakeCCompilerABI.c.obj C:\\Users\\lenovo\\AppData\\Local\\Temp\\cchdOy5Q.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-v' '-o' 'CMakeFiles/cmTC_245fa.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_245fa.dir/']
+        ignore line: [ E:/RoboMaster/OpenOCD/DevEnv/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv7e-m+fp -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mfpu=fpv4-sp-d16 -meabi=5 -o CMakeFiles/cmTC_245fa.dir/CMakeCCompilerABI.c.obj C:\\Users\\lenovo\\AppData\\Local\\Temp\\ccNzpr5E.s]
         ignore line: [GNU assembler version 2.42.0 (arm-none-eabi) using BFD version (GNU Tools for STM32 13.3.rel1.20240926-1715) 2.42.0.20240614]
         ignore line: [COMPILER_PATH=E:/RoboMaster/OpenOCD/DevEnv/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/]
         ignore line: [E:/RoboMaster/OpenOCD/DevEnv/GNU-tools-for-STM32/bin/../lib/gcc/]
@@ -5090,8 +5090,8 @@ events:
         ignore line: [E:/RoboMaster/OpenOCD/DevEnv/GNU-tools-for-STM32/bin/../lib/gcc/]
         ignore line: [E:/RoboMaster/OpenOCD/DevEnv/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/]
         ignore line: [E:/RoboMaster/OpenOCD/DevEnv/GNU-tools-for-STM32/bin/../arm-none-eabi/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-v' '-o' 'CMakeFiles/cmTC_89917.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_89917.dir/CMakeCCompilerABI.c.'\x0d]
-        ignore line: [[2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "E:\\CLion 2025.3.3\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E rm -f libcmTC_89917.a && E:\\RoboMaster\\OpenOCD\\DevEnv\\GNU-tools-for-STM32\\bin\\arm-none-eabi-ar.exe qc libcmTC_89917.a  CMakeFiles/cmTC_89917.dir/CMakeCCompilerABI.c.obj && E:\\RoboMaster\\OpenOCD\\DevEnv\\GNU-tools-for-STM32\\bin\\arm-none-eabi-ranlib.exe libcmTC_89917.a && cd ."]
+        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-v' '-o' 'CMakeFiles/cmTC_245fa.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_245fa.dir/CMakeCCompilerABI.c.'\x0d]
+        ignore line: [[2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "E:\\CLion 2025.3.3\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E rm -f libcmTC_245fa.a && E:\\RoboMaster\\OpenOCD\\DevEnv\\GNU-tools-for-STM32\\bin\\arm-none-eabi-ar.exe qc libcmTC_245fa.a  CMakeFiles/cmTC_245fa.dir/CMakeCCompilerABI.c.obj && E:\\RoboMaster\\OpenOCD\\DevEnv\\GNU-tools-for-STM32\\bin\\arm-none-eabi-ranlib.exe libcmTC_245fa.a && cd ."]
         ignore line: []
         ignore line: []
         implicit libs: []
@@ -5109,8 +5109,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "E:/RoboMaster/C_Board_Framework_Old/C_Board_Framework_Old/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-5v7msy"
-      binary: "E:/RoboMaster/C_Board_Framework_Old/C_Board_Framework_Old/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-5v7msy"
+      source: "E:/RoboMaster/C_Board_Framework_Old/C_Board_Framework_Old/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-qp1eim"
+      binary: "E:/RoboMaster/C_Board_Framework_Old/C_Board_Framework_Old/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-qp1eim"
     cmakeVariables:
       CMAKE_CXX_FLAGS: " -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics"
       CMAKE_CXX_FLAGS_DEBUG: "-O0 -g3"
@@ -5120,10 +5120,10 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'E:/RoboMaster/C_Board_Framework_Old/C_Board_Framework_Old/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-5v7msy'
+        Change Dir: 'E:/RoboMaster/C_Board_Framework_Old/C_Board_Framework_Old/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-qp1eim'
         
-        Run Build Command(s): "E:/CLion 2025.3.3/bin/ninja/win/x64/ninja.exe" -v cmTC_86ff9
-        [1/2] E:\\RoboMaster\\OpenOCD\\DevEnv\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe   -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics    -v -o CMakeFiles/cmTC_86ff9.dir/CMakeCXXCompilerABI.cpp.obj -c "E:/CLion 2025.3.3/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp"
+        Run Build Command(s): "E:/CLion 2025.3.3/bin/ninja/win/x64/ninja.exe" -v cmTC_f036d
+        [1/2] E:\\RoboMaster\\OpenOCD\\DevEnv\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe   -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics    -v -o CMakeFiles/cmTC_f036d.dir/CMakeCXXCompilerABI.cpp.obj -c "E:/CLion 2025.3.3/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp"
         Using built-in specs.
         COLLECT_GCC=E:\\RoboMaster\\OpenOCD\\DevEnv\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe
         Target: arm-none-eabi
@@ -5131,8 +5131,8 @@ events:
         Thread model: single
         Supported LTO compression algorithms: zlib
         gcc version 13.3.1 20240614 (GNU Tools for STM32 13.3.rel1.20240926-1715) 
-        COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_86ff9.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_86ff9.dir/'
-         E:/RoboMaster/OpenOCD/DevEnv/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/cc1plus.exe -quiet -v -imultilib thumb/v7e-m+fp/hard -iprefix E:\\RoboMaster\\OpenOCD\\DevEnv\\GNU-tools-for-STM32\\bin\\../lib/gcc/arm-none-eabi/13.3.1/ -isysroot E:\\RoboMaster\\OpenOCD\\DevEnv\\GNU-tools-for-STM32\\bin\\../arm-none-eabi -D__USES_INITFINI__ E:/CLion 2025.3.3/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_86ff9.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -mlibarch=armv7e-m+fp -march=armv7e-m+fp -Wall -version -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -o C:\\Users\\lenovo\\AppData\\Local\\Temp\\ccI2Xb7g.s
+        COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_f036d.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_f036d.dir/'
+         E:/RoboMaster/OpenOCD/DevEnv/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/cc1plus.exe -quiet -v -imultilib thumb/v7e-m+fp/hard -iprefix E:\\RoboMaster\\OpenOCD\\DevEnv\\GNU-tools-for-STM32\\bin\\../lib/gcc/arm-none-eabi/13.3.1/ -isysroot E:\\RoboMaster\\OpenOCD\\DevEnv\\GNU-tools-for-STM32\\bin\\../arm-none-eabi -D__USES_INITFINI__ E:/CLion 2025.3.3/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_f036d.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -mlibarch=armv7e-m+fp -march=armv7e-m+fp -Wall -version -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -o C:\\Users\\lenovo\\AppData\\Local\\Temp\\cclfR18S.s
         GNU C++17 (GNU Tools for STM32 13.3.rel1.20240926-1715) version 13.3.1 20240614 (arm-none-eabi)
         	compiled by GNU C version 7.3-win32 20180312, GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
         
@@ -5155,13 +5155,13 @@ events:
          E:/RoboMaster/OpenOCD/DevEnv/GNU-tools-for-STM32/lib/gcc/../../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/include
         End of search list.
         Compiler executable checksum: 81f15da80051adef2eee7279f6f54e34
-        COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_86ff9.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_86ff9.dir/'
-         E:/RoboMaster/OpenOCD/DevEnv/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv7e-m+fp -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mfpu=fpv4-sp-d16 -meabi=5 -o CMakeFiles/cmTC_86ff9.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\lenovo\\AppData\\Local\\Temp\\ccI2Xb7g.s
+        COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_f036d.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_f036d.dir/'
+         E:/RoboMaster/OpenOCD/DevEnv/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv7e-m+fp -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mfpu=fpv4-sp-d16 -meabi=5 -o CMakeFiles/cmTC_f036d.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\lenovo\\AppData\\Local\\Temp\\cclfR18S.s
         GNU assembler version 2.42.0 (arm-none-eabi) using BFD version (GNU Tools for STM32 13.3.rel1.20240926-1715) 2.42.0.20240614
         COMPILER_PATH=E:/RoboMaster/OpenOCD/DevEnv/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/;E:/RoboMaster/OpenOCD/DevEnv/GNU-tools-for-STM32/bin/../lib/gcc/;E:/RoboMaster/OpenOCD/DevEnv/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/
         LIBRARY_PATH=E:/RoboMaster/OpenOCD/DevEnv/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/;E:/RoboMaster/OpenOCD/DevEnv/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/;E:/RoboMaster/OpenOCD/DevEnv/GNU-tools-for-STM32/bin/../arm-none-eabi/lib/thumb/v7e-m+fp/hard/;E:/RoboMaster/OpenOCD/DevEnv/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/;E:/RoboMaster/OpenOCD/DevEnv/GNU-tools-for-STM32/bin/../lib/gcc/;E:/RoboMaster/OpenOCD/DevEnv/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/;E:/RoboMaster/OpenOCD/DevEnv/GNU-tools-for-STM32/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_86ff9.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_86ff9.dir/CMakeCXXCompilerABI.cpp.'\x0d
-        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "E:\\CLion 2025.3.3\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E rm -f libcmTC_86ff9.a && E:\\RoboMaster\\OpenOCD\\DevEnv\\GNU-tools-for-STM32\\bin\\arm-none-eabi-ar.exe qc libcmTC_86ff9.a  CMakeFiles/cmTC_86ff9.dir/CMakeCXXCompilerABI.cpp.obj && E:\\RoboMaster\\OpenOCD\\DevEnv\\GNU-tools-for-STM32\\bin\\arm-none-eabi-ranlib.exe libcmTC_86ff9.a && cd ."
+        COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_f036d.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_f036d.dir/CMakeCXXCompilerABI.cpp.'\x0d
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "E:\\CLion 2025.3.3\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E rm -f libcmTC_f036d.a && E:\\RoboMaster\\OpenOCD\\DevEnv\\GNU-tools-for-STM32\\bin\\arm-none-eabi-ar.exe qc libcmTC_f036d.a  CMakeFiles/cmTC_f036d.dir/CMakeCXXCompilerABI.cpp.obj && E:\\RoboMaster\\OpenOCD\\DevEnv\\GNU-tools-for-STM32\\bin\\arm-none-eabi-ranlib.exe libcmTC_f036d.a && cd ."
         
       exitCode: 0
   -
@@ -5212,10 +5212,10 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(arm-none-eabi-g\\+\\+\\.exe|;ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(arm-none-eabi-g\\+\\+\\.exe|;ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: 'E:/RoboMaster/C_Board_Framework_Old/C_Board_Framework_Old/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-5v7msy']
+        ignore line: [Change Dir: 'E:/RoboMaster/C_Board_Framework_Old/C_Board_Framework_Old/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-qp1eim']
         ignore line: []
-        ignore line: [Run Build Command(s): "E:/CLion 2025.3.3/bin/ninja/win/x64/ninja.exe" -v cmTC_86ff9]
-        ignore line: [[1/2] E:\\RoboMaster\\OpenOCD\\DevEnv\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe   -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics    -v -o CMakeFiles/cmTC_86ff9.dir/CMakeCXXCompilerABI.cpp.obj -c "E:/CLion 2025.3.3/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp"]
+        ignore line: [Run Build Command(s): "E:/CLion 2025.3.3/bin/ninja/win/x64/ninja.exe" -v cmTC_f036d]
+        ignore line: [[1/2] E:\\RoboMaster\\OpenOCD\\DevEnv\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe   -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics    -v -o CMakeFiles/cmTC_f036d.dir/CMakeCXXCompilerABI.cpp.obj -c "E:/CLion 2025.3.3/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp"]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=E:\\RoboMaster\\OpenOCD\\DevEnv\\GNU-tools-for-STM32\\bin\\arm-none-eabi-g++.exe]
         ignore line: [Target: arm-none-eabi]
@@ -5223,8 +5223,8 @@ events:
         ignore line: [Thread model: single]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 13.3.1 20240614 (GNU Tools for STM32 13.3.rel1.20240926-1715) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_86ff9.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_86ff9.dir/']
-        ignore line: [ E:/RoboMaster/OpenOCD/DevEnv/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/cc1plus.exe -quiet -v -imultilib thumb/v7e-m+fp/hard -iprefix E:\\RoboMaster\\OpenOCD\\DevEnv\\GNU-tools-for-STM32\\bin\\../lib/gcc/arm-none-eabi/13.3.1/ -isysroot E:\\RoboMaster\\OpenOCD\\DevEnv\\GNU-tools-for-STM32\\bin\\../arm-none-eabi -D__USES_INITFINI__ E:/CLion 2025.3.3/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_86ff9.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -mlibarch=armv7e-m+fp -march=armv7e-m+fp -Wall -version -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -o C:\\Users\\lenovo\\AppData\\Local\\Temp\\ccI2Xb7g.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_f036d.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_f036d.dir/']
+        ignore line: [ E:/RoboMaster/OpenOCD/DevEnv/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/cc1plus.exe -quiet -v -imultilib thumb/v7e-m+fp/hard -iprefix E:\\RoboMaster\\OpenOCD\\DevEnv\\GNU-tools-for-STM32\\bin\\../lib/gcc/arm-none-eabi/13.3.1/ -isysroot E:\\RoboMaster\\OpenOCD\\DevEnv\\GNU-tools-for-STM32\\bin\\../arm-none-eabi -D__USES_INITFINI__ E:/CLion 2025.3.3/bin/cmake/win/x64/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_f036d.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -mlibarch=armv7e-m+fp -march=armv7e-m+fp -Wall -version -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -o C:\\Users\\lenovo\\AppData\\Local\\Temp\\cclfR18S.s]
         ignore line: [GNU C++17 (GNU Tools for STM32 13.3.rel1.20240926-1715) version 13.3.1 20240614 (arm-none-eabi)]
         ignore line: [	compiled by GNU C version 7.3-win32 20180312  GMP version 6.2.1  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.15-1-g835ea3a-GMP]
         ignore line: []
@@ -5247,8 +5247,8 @@ events:
         ignore line: [ E:/RoboMaster/OpenOCD/DevEnv/GNU-tools-for-STM32/lib/gcc/../../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 81f15da80051adef2eee7279f6f54e34]
-        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_86ff9.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_86ff9.dir/']
-        ignore line: [ E:/RoboMaster/OpenOCD/DevEnv/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv7e-m+fp -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mfpu=fpv4-sp-d16 -meabi=5 -o CMakeFiles/cmTC_86ff9.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\lenovo\\AppData\\Local\\Temp\\ccI2Xb7g.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_f036d.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_f036d.dir/']
+        ignore line: [ E:/RoboMaster/OpenOCD/DevEnv/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv7e-m+fp -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mfpu=fpv4-sp-d16 -meabi=5 -o CMakeFiles/cmTC_f036d.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\lenovo\\AppData\\Local\\Temp\\cclfR18S.s]
         ignore line: [GNU assembler version 2.42.0 (arm-none-eabi) using BFD version (GNU Tools for STM32 13.3.rel1.20240926-1715) 2.42.0.20240614]
         ignore line: [COMPILER_PATH=E:/RoboMaster/OpenOCD/DevEnv/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/]
         ignore line: [E:/RoboMaster/OpenOCD/DevEnv/GNU-tools-for-STM32/bin/../lib/gcc/]
@@ -5260,8 +5260,8 @@ events:
         ignore line: [E:/RoboMaster/OpenOCD/DevEnv/GNU-tools-for-STM32/bin/../lib/gcc/]
         ignore line: [E:/RoboMaster/OpenOCD/DevEnv/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/]
         ignore line: [E:/RoboMaster/OpenOCD/DevEnv/GNU-tools-for-STM32/bin/../arm-none-eabi/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_86ff9.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_86ff9.dir/CMakeCXXCompilerABI.cpp.'\x0d]
-        ignore line: [[2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "E:\\CLion 2025.3.3\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E rm -f libcmTC_86ff9.a && E:\\RoboMaster\\OpenOCD\\DevEnv\\GNU-tools-for-STM32\\bin\\arm-none-eabi-ar.exe qc libcmTC_86ff9.a  CMakeFiles/cmTC_86ff9.dir/CMakeCXXCompilerABI.cpp.obj && E:\\RoboMaster\\OpenOCD\\DevEnv\\GNU-tools-for-STM32\\bin\\arm-none-eabi-ranlib.exe libcmTC_86ff9.a && cd ."]
+        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-mcpu=cortex-m4' '-mfpu=fpv4-sp-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_f036d.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp' '-march=armv7e-m+fp' '-dumpdir' 'CMakeFiles/cmTC_f036d.dir/CMakeCXXCompilerABI.cpp.'\x0d]
+        ignore line: [[2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && "E:\\CLion 2025.3.3\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E rm -f libcmTC_f036d.a && E:\\RoboMaster\\OpenOCD\\DevEnv\\GNU-tools-for-STM32\\bin\\arm-none-eabi-ar.exe qc libcmTC_f036d.a  CMakeFiles/cmTC_f036d.dir/CMakeCXXCompilerABI.cpp.obj && E:\\RoboMaster\\OpenOCD\\DevEnv\\GNU-tools-for-STM32\\bin\\arm-none-eabi-ranlib.exe libcmTC_f036d.a && cd ."]
         ignore line: []
         ignore line: []
         linker tool for 'CXX': [1/2] E:/RoboMaster/OpenOCD/DevEnv/GNU-tools-for-STM32/bin/arm-none-eabi-g++.exe

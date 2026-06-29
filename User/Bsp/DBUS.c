@@ -141,7 +141,7 @@ static float DBUS_OneFilter(float last, float now, float thresholdValue)
     const float sensitivlFilter = 0.8f;
     const float numbFilter = 0.2f;
 
-    if (MATH_ABS_float(MATH_ABS_float(last) - MATH_ABS_float(now)) >= thresholdValue)
+    if (RUI_F_MATH_ABS_float(RUI_F_MATH_ABS_float(last) - RUI_F_MATH_ABS_float(now)) >= thresholdValue)
     {
         return (now * sensitivlFilter + last * (1.0f - sensitivlFilter));
     }

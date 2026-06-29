@@ -137,7 +137,7 @@ static float VT_OneFilter(float last, float now, float thresholdValue)
 {
     const float sensitivlFilter = 0.8f;
     const float numbFilter = 0.2f;
-    if (MATH_ABS_float(last - now) >= thresholdValue)
+    if (RUI_F_MATH_ABS_float(last - now) >= thresholdValue)
         return (now * sensitivlFilter + last * (1.0f - sensitivlFilter));
     else
         return (now * numbFilter + last * (1.0f - numbFilter));

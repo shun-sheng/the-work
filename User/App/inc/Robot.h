@@ -6,18 +6,12 @@
 
 
 void RobotTask(uint8_t mode,
-               DBUS_Typedef *DBUS,
-               CONTAL_Typedef *CONTAL,
-               User_Data_T *User_data,
-               CAPDATE_TYPDEF *CAP_DATA,
-               TYPEDEF_VISION *Vision/* ��ͨ�Ӿ�*/
-							/*	VisionRxDataUnion *Vision ��Ԥ���Ӿ�*/,
-               RUI_ROOT_STATUS_Typedef *Root,
-               MOTOR_Typedef *MOTOR,
-               IMU_Data_t *IMU_Data,
-							 TD_t *TDDD,
-							VT13_Typedef* VT13_DBUS);
-
+			   DBUS_Typedef *DBUS,
+			   CONTAL_Typedef *CONTAL,
+			   User_Data_T *User_data,
+			   CAPDATE_TYPDEF *CAP_DATA,
+			   RUI_ROOT_STATUS_Typedef *Root,
+			   IMU_Data_t *IMU_Data);
 float RUI_F_GET_FIRE_WIPE_SPEED(CONTAL_Typedef *CONTAL, DBUS_Typedef *DBUS,
                                 User_Data_T *User_data, RUI_ROOT_STATUS_Typedef *Root);
 

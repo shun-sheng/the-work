@@ -22,5 +22,6 @@ float shortest_path(float Current,float Target);
 float low(float*a,float b,float n);
 float IntervalLimit(float max, float min, float data);
 float limit(float max, float min, float* data);
+void convertAngleToIndex(float angle, float *index);
 
 #endif
