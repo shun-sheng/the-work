@@ -10,8 +10,8 @@
 #include "can_bsp.h"
 #include "bsp_dwt.h"
 
-Mecanum_typdef MecanumData={0};
-
+//Mecanum_typdef MecanumData={0};
+mecanumInit_typdef MecanumData={0};
 //总控制结构体
 CONTAL_Typedef RUI_V_CONTAL = { 0 };
 

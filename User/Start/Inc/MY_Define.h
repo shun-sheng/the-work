@@ -1952,8 +1952,8 @@ extern uint8_t VisionRx[30];
 extern uint8_t sd_v_buff[24];
 extern uint8_t RX[20];
 extern uint8_t Referee_Rx_Buf[2][REFEREE_RXFRAME_LENGTH];
-extern Mecanum_typdef MecanumData;
-
+//extern Mecanum_typdef MecanumData;
+extern mecanumInit_typdef MecanumData;
 /* ---------- 模块级全局变量（在各 .c 中定义，此处仅 extern） ---------- */
 extern uint8_t GlobalDebugMode;
 extern int16_t cur_int16;
